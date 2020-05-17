@@ -52,7 +52,7 @@ public:
         partsum = 0;
         for(j = i + 1; j < A.size(); j++){
             partsum = partsum + A[j];
-            if(partsum == sum/3){
+            if(partsum == sum/3 && j != A.size()-1){  //需要满足最后一个数组非空
                 return true;
             }
         }
