@@ -33,6 +33,7 @@ public:
         if(k<0){
             return 0;
         }
+        
         if(k==0){
             for(i=0;i<nums.size();i++){
                 ++map[nums[i]];
@@ -41,16 +42,17 @@ public:
                 }
             }
             return count;
-        }
+        }//当k=0时，其实就是找数组中有没有重复元素 且重复元素个数大于等于2时 我们都视为只有1组K-diff
+        
         for(i=0;i<nums.size();i++){
             map[nums[i]]=0;
-        }
+        }//k为其他数字时，先构建hash表，将value初始化为0.
         for(i=0;i<nums.size();i++){
-            if(map.find(nums[i]-k)!=map.end()){
-                if(map[nums[i]]==0){
+            if(map.find(nums[i]-k)!=map.end()){  //若nums[i]-k存在于数组中。注：nums[i]-k必然小于nums[i] diff数对为{num[i], nums[i]-k}
+                if(map[nums[i]]==0){//已经存在的diff数对中还没有出现过nums[i]为第一个数
                     ++count;
                 }
-                ++map[nums[i]];
+                ++map[nums[i]];//给nums[i]标记，表示已经有nums[i]开头的数对了，后面不再考虑
             }
         }
         return count;
