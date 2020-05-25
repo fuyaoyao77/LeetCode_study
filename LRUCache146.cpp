@@ -28,6 +28,12 @@ cache.get(1);       // 返回 -1 (未找到)
 cache.get(3);       // 返回  3
 cache.get(4);       // 返回  4
 
+
+时间复杂度：对于 put 和 get 都是 O(1)。
+
+空间复杂度：O(\text{capacity})，因为哈希表和双向链表最多存储 \text{capacity} +1  个元素。
+
+
 */
 
 
