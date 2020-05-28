@@ -18,6 +18,7 @@
 输出：[false,false,false]
 示例 3：
 
+
 输入：[0,1,1,1,1,1]
 输出：[true,false,false,false,true,false]
 示例 4：
