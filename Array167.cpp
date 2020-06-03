@@ -23,7 +23,7 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& numbers, int target) {
         unordered_map<int,int> map;
-        vector<int> index(2,0);
+        //vector<int> index(2,0);
         int i;
         for(i = 0; i < numbers.size(); i++){
             map[numbers[i]] = i;
@@ -31,13 +31,15 @@ public:
         for(i = 0; i < numbers.size(); i++){
             if(map.find(target - numbers[i]) != map.end()){
                 if(i != map[target - numbers[i]]){
-                    index[0] = i + 1;
-                    index[1] = map[target - numbers[i]] + 1;
-                    break;
+                    return {i + 1, ,map[target - numbers[i]] + 1};
+                    //index[0] = i + 1;
+                    //index[1] = map[target - numbers[i]] + 1;
+                    //break;
                 }
             }
         }
-        return index;
+        //return index;
+        return {-1,-1};
     }
 };
 
