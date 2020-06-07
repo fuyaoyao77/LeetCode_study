@@ -37,6 +37,9 @@ wordList = ["hot","dot","dog","lot","log"]
 
 */
 
+
+const int INF = 1 << 20;
+
 class Solution {
 private:
     unordered_map<string, int> wordId;
