@@ -18,10 +18,12 @@
 时间复杂度小于 O(n2) 。
 数组中只有一个重复的数字，但它可能不止重复出现一次。
 
+
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/find-the-duplicate-number
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
+
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
