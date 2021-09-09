@@ -41,6 +41,7 @@ nums2 = [3, 4]
 
 */
 
+// add some thing here
 
 class Solution {
 public:
@@ -58,7 +59,8 @@ public:
 
         int m = nums1.size();
         int n = nums2.size();
-        int index1 = 0, index2 = 0;
+        int index1 = 0;
+        int index2 = 0;
 
         while (true) {
             // 边界情况
