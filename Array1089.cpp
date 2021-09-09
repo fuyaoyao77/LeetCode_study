@@ -34,13 +34,14 @@ public:
          int last, count = 0, size = arr.size();
         for(int i = 0; i < size; i++){
             if(arr[i] == 0){
-                count = count + 2;
+                count += 2;
             }
             else{
                 count++;
             }
             if(count >= size){
                 last = i;
+                
                 break;
             }
         }
