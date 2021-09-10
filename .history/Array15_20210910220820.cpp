@@ -58,11 +58,6 @@ public:
 };
 
 */
-#include<iostream>
-#include<vector>
-#include<algorithm>
-
-using namespace std;
 
 class Solution {
 public:
@@ -103,27 +98,11 @@ public:
 };
 
 
-int main(){
-    vector<int> nums = {-1, 0, 1, 2, -1, -4};
-    Solution sol;
-    vector<vector<int>> ans = sol.threeSum(nums);
-    cout << "[" << endl;
-    int i = 0, j = 0;
-    for(i = 0; i < ans.size() - 1; i++){
-        cout<<"[";
-        for(j = 0; j < ans[0].size() - 1; j++){
-            cout<<ans[i][j]<<",";
-        }
-        cout<<ans[i][j];
-        cout<<"],"<<endl;
+int main(int argc, const char** argv) {
+    vector<int> nums = [-1, 0, 1, 2, -1, -4];
+    vector<vector<int>> ans = threeSum(vector<int>& nums);
+    for(int i = 0; i < length(ans); i++){
+        
     }
-    cout<<"[";
-    for(j = 0; j < ans[0].size() - 1; j++){
-            cout<<ans[i][j]<<",";
-        }
-        cout<<ans[i][j];
-    cout<<"]"<<endl;
-    cout<<"]"<<endl;
-    
     return 0;
 }

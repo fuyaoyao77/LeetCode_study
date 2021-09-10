@@ -108,22 +108,13 @@ int main(){
     Solution sol;
     vector<vector<int>> ans = sol.threeSum(nums);
     cout << "[" << endl;
-    int i = 0, j = 0;
-    for(i = 0; i < ans.size() - 1; i++){
+    for(int i = 0; i < ans.size(); i++){
         cout<<"[";
-        for(j = 0; j < ans[0].size() - 1; j++){
+        for(int j = 0; j < ans[0].size(); j++){
             cout<<ans[i][j]<<",";
         }
-        cout<<ans[i][j];
-        cout<<"],"<<endl;
+        cout<<"]";
     }
-    cout<<"[";
-    for(j = 0; j < ans[0].size() - 1; j++){
-            cout<<ans[i][j]<<",";
-        }
-        cout<<ans[i][j];
-    cout<<"]"<<endl;
-    cout<<"]"<<endl;
-    
+    cout << ans.size() << endl;
     return 0;
 }
